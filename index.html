@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Beauty Nail Inc. | Brooklyn, NY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #FAF9F6; color: #1C1C1C; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        .hero-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <!-- Nav -->
+    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div class="text-xl font-medium tracking-tight">Create Beauty</div>
+        <a href="tel:3479669990" class="text-sm uppercase tracking-widest border-b border-black pb-1 hover:text-gray-500 transition">Book Now</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h1 class="text-6xl md:text-8xl leading-none tracking-tight mb-8">A peaceful<br>oasis for<br><span class="italic text-gray-500">your nails.</span></h1>
+            <p class="text-lg md:text-xl font-light text-gray-600 max-w-md mb-10 leading-relaxed">
+                Located in Brooklyn, NY. We specialize in Manicure, Pedicure, Tip Set, and Waxing. You deserve this moment of relaxation.
+            </p>
+            <a href="tel:3479669990" class="inline-block bg-black text-white px-8 py-4 rounded-full text-sm uppercase tracking-wide hover:bg-gray-800 transition">Call (347) 966-9990</a>
+        </div>
+        <div class="h-[600px] w-full bg-gray-200 overflow-hidden rounded-2xl">
+            <img src="https://images.pexels.com/photos/34871553/pexels-photo-34871553.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Elegant Manicure" class="hero-img hover:scale-105 transition duration-700">
+        </div>
+    </header>
+
+    <!-- Details -->
+    <section class="bg-black text-white py-24 px-8 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl serif mb-6">Business Hours</h2>
+                <ul class="space-y-4 font-light text-gray-300">
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Mon - Sat</span> <span>9:30 AM - 8:00 PM</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Sunday</span> <span>10:00 AM - 7:30 PM</span></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-4xl serif mb-6">Our Philosophy</h2>
+                <p class="font-light text-gray-300 leading-relaxed text-lg mb-8">
+                    Treating yourself doesn't have to break the bank. We offer competitive prices, so you can enjoy a fresh nail polish without guilt. Our salon is designed to be your escape from daily stress.
+                </p>
+                <a href="mailto:contact@createbeautynail.com" class="text-sm uppercase tracking-widest border-b border-white pb-1 hover:text-gray-400 transition">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
