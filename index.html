@@ -16,49 +16,106 @@
             width: 100%;
             height: 100%;
         }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-black selection:text-white">
 
     <!-- Nav -->
-    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+    <nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto sticky top-0 bg-[#FAF9F6] z-50">
         <div class="text-xl font-medium tracking-tight">Create Beauty</div>
-        <a href="tel:3479669990" class="text-sm uppercase tracking-widest border-b border-black pb-1 hover:text-gray-500 transition">Book Now</a>
+        <div class="flex gap-8 items-center">
+            <a href="#services" class="hidden md:block text-sm uppercase tracking-widest hover:text-gray-500 transition">Services</a>
+            <a href="tel:3479669990" class="text-sm uppercase tracking-widest border-b border-black pb-1 hover:text-gray-500 transition">Book Now</a>
+        </div>
     </nav>
 
     <!-- Hero -->
-    <header class="max-w-7xl mx-auto px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div>
+    <header class="max-w-7xl mx-auto px-8 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="fade-in">
             <h1 class="text-6xl md:text-8xl leading-none tracking-tight mb-8">A peaceful<br>oasis for<br><span class="italic text-gray-500">your nails.</span></h1>
             <p class="text-lg md:text-xl font-light text-gray-600 max-w-md mb-10 leading-relaxed">
                 Located in Brooklyn, NY. We specialize in Manicure, Pedicure, Tip Set, and Waxing. You deserve this moment of relaxation.
             </p>
             <a href="tel:3479669990" class="inline-block bg-black text-white px-8 py-4 rounded-full text-sm uppercase tracking-wide hover:bg-gray-800 transition">Call (347) 966-9990</a>
         </div>
-        <div class="h-[600px] w-full bg-gray-200 overflow-hidden rounded-2xl">
+        <div class="h-[600px] w-full bg-gray-200 overflow-hidden rounded-[2rem] fade-in" style="animation-delay: 0.2s;">
             <img src="https://images.pexels.com/photos/34871553/pexels-photo-34871553.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800" alt="Elegant Manicure" class="hero-img hover:scale-105 transition duration-700">
         </div>
     </header>
 
-    <!-- Details -->
-    <section class="bg-black text-white py-24 px-8 mt-20">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-4xl serif mb-6">Business Hours</h2>
-                <ul class="space-y-4 font-light text-gray-300">
-                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Mon - Sat</span> <span>9:30 AM - 8:00 PM</span></li>
-                    <li class="flex justify-between border-b border-gray-800 pb-2"><span>Sunday</span> <span>10:00 AM - 7:30 PM</span></li>
-                </ul>
+    <!-- Services Gallery -->
+    <section id="services" class="max-w-7xl mx-auto px-8 py-24">
+        <h2 class="text-5xl md:text-6xl serif mb-16 text-center">Our Signature Services</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- Service 1 -->
+            <div class="group cursor-pointer">
+                <div class="h-96 rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                    <img src="https://images.pexels.com/photos/6135672/pexels-photo-6135672.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600" alt="Manicure" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl serif mb-3">Classic Manicure</h3>
+                <p class="font-light text-gray-600 leading-relaxed">Precision nail shaping, cuticle care, and a flawless polish application to keep your hands looking elegant.</p>
             </div>
-            <div>
-                <h2 class="text-4xl serif mb-6">Our Philosophy</h2>
-                <p class="font-light text-gray-300 leading-relaxed text-lg mb-8">
-                    Treating yourself doesn't have to break the bank. We offer competitive prices, so you can enjoy a fresh nail polish without guilt. Our salon is designed to be your escape from daily stress.
-                </p>
-                <a href="mailto:contact@createbeautynail.com" class="text-sm uppercase tracking-widest border-b border-white pb-1 hover:text-gray-400 transition">Email Us</a>
+            
+            <!-- Service 2 -->
+            <div class="group cursor-pointer">
+                <div class="h-96 rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                    <img src="https://images.pexels.com/photos/31091768/pexels-photo-31091768.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600" alt="Pedicure" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl serif mb-3">Spa Pedicure</h3>
+                <p class="font-light text-gray-600 leading-relaxed">Relaxing foot soak, exfoliation, massage, and perfect polish. Give your feet the ultimate pampering.</p>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="group cursor-pointer">
+                <div class="h-96 rounded-2xl overflow-hidden mb-6 bg-gray-100">
+                    <img src="https://images.pexels.com/photos/6763618/pexels-photo-6763618.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600" alt="Waxing" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl serif mb-3">Gentle Waxing</h3>
+                <p class="font-light text-gray-600 leading-relaxed">Smooth, hair-free skin with our gentle, high-quality waxing treatments designed for maximum comfort.</p>
             </div>
         </div>
     </section>
+
+    <!-- Details -->
+    <section class="bg-black text-white py-32 px-8 mt-10 rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-4xl md:text-5xl serif mb-8">Business Hours</h2>
+                <ul class="space-y-6 font-light text-gray-300 text-lg">
+                    <li class="flex justify-between border-b border-gray-800 pb-4"><span>Monday - Saturday</span> <span>9:30 AM - 8:00 PM</span></li>
+                    <li class="flex justify-between border-b border-gray-800 pb-4"><span>Sunday</span> <span>10:00 AM - 7:30 PM</span></li>
+                </ul>
+                <div class="mt-12">
+                    <h3 class="text-2xl serif mb-4">Location</h3>
+                    <p class="font-light text-gray-400">Brooklyn, NY<br>Walk-ins welcome, appointments preferred.</p>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center">
+                <h2 class="text-4xl md:text-5xl serif mb-8">Our Philosophy</h2>
+                <p class="font-light text-gray-300 leading-relaxed text-xl mb-12">
+                    Treating yourself doesn't have to break the bank. We offer competitive prices, so you can enjoy a fresh nail polish without guilt. Our salon is designed to be your escape from daily stress—a place to unwind and indulge.
+                </p>
+                <div>
+                    <a href="mailto:contact@createbeautynail.com" class="inline-block border border-white px-8 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-center py-8 border-t border-gray-900 text-gray-500 font-light text-sm">
+        &copy; 2026 Create Beauty Nail Inc. All rights reserved.
+    </footer>
 
 </body>
 </html>
